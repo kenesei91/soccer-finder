@@ -4,14 +4,12 @@
     background-attachment: fixed;
     background-position:center;
     display:flex;
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
  }
-
-
 
 .hero-text {
     position:relative;
@@ -21,6 +19,27 @@
     font-weight: bold;
     color: #ffef0a; 
 }
+
+.card-header {
+    background-color: orange;
+    font-weight: bold;
+}
+
+.card-body {
+    font-weight: bold;
+    line-height: 0;
+}
+
+#current-name, #current-description {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#forecast {
+    font-size: 24px; 
+}
+
+
 .font {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -38,9 +57,7 @@ a {
 }
 
 .form-input {
-    border:#ffef0a solid 5px;
-    border-radius: 10px;
-    border-style: groove;
+    border-radius: 5px;
     padding: 45px 40px;
     font-size: 24px;
     color: #024e76;
@@ -92,7 +109,7 @@ a {
 }
 .wbtn {
     color: #3069c5;
-    background-color: rgba(202, 160, 207, 0.7);
+    background-color: rgba(202, 160, 207, 0.4);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     border: none;
     padding: 10px 20px;
@@ -114,14 +131,14 @@ footer h2 {
     padding: 100px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 20px;
-    text-align: bottom; 
+    text-align: center; 
     color: white;
 }
 
 /* Always set the map height explicitly to define the size of the div
 * element that contains the map. */
 #map {
-height: 60%;
+height: 50%;
 width:50%;
 border:#ffef0a solid 5px;
 border-radius: 10px;
@@ -147,3 +164,12 @@ background-color: rgba(203, 239, 246, 1);
   .hide{
       display:none;
   }
+
+#headerEl {
+    text-align: center;
+    color: #fea520;
+}
+
+#card-top {
+    border-radius: 5px;
+}
