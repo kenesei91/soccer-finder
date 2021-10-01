@@ -1,22 +1,3 @@
-
-/*var nameSubmit = document.querySelector("#search-btn");
-
-nameSubmit.addEventListener("click", function (e) {
-  e.preventDefault();
-  var nameInputEl = document.querySelector("#input-value").value.trim();
-  var openWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${nameInputEl}&units=imperial&appid=3f698036d7cb81fb192ca1a1ad2af845`;
-  //console.log(nameInputEl);
-
-  fetch(openWeatherUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (response) {
-      console.log(response);
-  
-    }); 
-});*/
-
 // calendar section start
 var submitBtn = document.querySelector("#play-button");
 var submit = document.querySelector("#submit");
