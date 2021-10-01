@@ -13,15 +13,13 @@ var tableHeader = document.querySelector("#table-header");
 var displaymessage = document.querySelector("#msg");
 var forecastContainerEl = document.querySelector("#fiveday-container");
 
-
 var forecastTitle = document.querySelector("#forecast");
-
 
 var city = "Austin";
 var button = document.querySelector("#btn");
 var forecastContainerEl = document.querySelector("#fiveday-container");
 
-button.addEventListener("click", function (e) {
+button.addEventListener("click", e => {
   e.preventDefault();
   //var nextEl = document.querySelector("#next-btn");
   var openWeatherForecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=imperial&appid=3f698036d7cb81fb192ca1a1ad2af845`;
@@ -34,29 +32,21 @@ button.addEventListener("click", function (e) {
       console.log(response);
 
       forecastContainerEl.textContent = ""
-
-
       forecastTitle.textContent = "Please check upcoming weather conditions prior to picking a date to play";
-
-
 
       var forecast = response.list;
       for (var i = 5; i < forecast.length; i = i + 8) {
         var dailyForecast = forecast[i];
         console.log(dailyForecast);
 
-
         var forecastEl = document.createElement("div");
         forecastEl.classList = "card bg-info color text-light m-2";
-
-        //console.log(dailyForecast)
 
         //create date element
         var forecastDate = document.createElement("h5")
         forecastDate.textContent = moment.unix(dailyForecast.dt).format("MMM D, YYYY");
         forecastDate.classList = "card-header text-center"
         forecastEl.appendChild(forecastDate);
-
 
         //create an image element
         var weatherIcon = document.createElement("img")
@@ -85,7 +75,6 @@ button.addEventListener("click", function (e) {
         //append to five day container
         forecastContainerEl.appendChild(forecastEl);
       }
-
     });
 
   var openWeatherCurrentUrl = `https://api.openweathermap.org/data/2.5/weather?q=Austin&units=imperial&appid=3f698036d7cb81fb192ca1a1ad2af845`;
@@ -106,7 +95,6 @@ button.addEventListener("click", function (e) {
       nameTitle.className = "city-title";
       nameTitle.textContent = uppercase;
 
-
       var iconTitle = document.createElement("img");
       iconTitle.setAttribute("src", `https://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`);
 
@@ -117,7 +105,6 @@ button.addEventListener("click", function (e) {
       var text = document.createElement("p");
       text.textContent = response.weather[0].description;
       text.className = "text-description";
-
 
       currentName.appendChild(nameTitle);
       currentIcon.appendChild(iconTitle);
